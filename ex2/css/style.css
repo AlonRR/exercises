@@ -3,6 +3,12 @@
     padding: 0;
 }
 
+a {
+    /* Removes underline from link */
+    text-decoration: none;
+    display: block;
+}
+
 header,
 main,
 footer,
@@ -12,7 +18,9 @@ section {
     display: block;
 }
 
-header {
+header,
+footer,
+main {
     width: 100%;
 }
 
