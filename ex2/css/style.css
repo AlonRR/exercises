@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header,
+main,
+footer,
+nav,
+aside,
+section {
+    display: block;
+}
+
+header {
+    width: 100%;
+}
+
+#logo {
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 88px;
+    width: 88px;
+    display: block;
+}
+
+#logo span {
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    fill: solid;
+    color: #222222;
+}
