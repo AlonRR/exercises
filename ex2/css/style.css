@@ -16,6 +16,7 @@ nav,
 aside,
 section {
     display: block;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 header,
@@ -34,8 +35,21 @@ main {
 }
 
 #logo span {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier-New', Courier, monospace;
     text-decoration: none;
     fill: solid;
     color: #222222;
+}
+
+#exsersise_nav_bar{
+    display: block;
+}
+
+#exsersise_nav_bar a {
+    display: block;
+
+}
+
+#exsersise_nav_bar a:hover {
+    background;
 }
