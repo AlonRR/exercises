@@ -30,7 +30,7 @@ footer {
     background-image: url();
     background-repeat: no-repeat;
     background-size: contain;
-    position: absolute;
+    position: relative;
     width: 192px;
     height: 33px;
     left: 40px;
@@ -39,6 +39,7 @@ footer {
 }
 
 .logo span {
+    position: relative;
     text-decoration: none;
     fill: solid;
     color: #222222;
@@ -66,9 +67,49 @@ footer {
 
 .info p {}
 
-.exs {}
+.exs {
+    margin: auto;
+    position: relative;
+    display: block;
+    width: 100%;
+    float: left;
+    font-weight: 500;
+}
 
-.ex_btn {}
+.ex {
+    float: left;
+    position: relative;
+    width: 152px;
+    height: 216px;
+    display: block;
+    margin: 24px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 24px;
+}
+
+.ex :hover {
+    background-color: inherit;
+}
+
+.ex_btn {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    border: none;
+    width: 120px;
+    height: 40px;
+    color: #000000;
+    position: absolute;
+    bottom: 40px;
+    left: 24px;
+    padding: auto
+}
+
+.ex_btn p {
+    position: relative;
+    top: 10px;
+    height: 20px;
+}
 
 #ex1 {
     background-color: #FDEDE5;
