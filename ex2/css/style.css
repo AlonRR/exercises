@@ -5,7 +5,7 @@
 }
 
 a {
-    /* Remo ves underline from link */
+    /* Removes underline from link */
     text-decoration: none;
     display: block;
 }
@@ -27,15 +27,14 @@ footer {
 
 .logo {
     font-family: 'Nunito';
-    background-image: url();
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
-    width: 192px;
     height: 33px;
-    left: 40px;
-    top: 40px;
+    margin: 40px;
+    line-height: 33px;
     font-weight: 700;
+    letter-spacing: 0.25em;
 }
 
 .logo span {
@@ -51,29 +50,62 @@ footer {
     height: 555px;
     left: 0px;
     /* top: 123px; */
+    margin-bottom: 24px;
+}
+
+#not_rectangle {
+    position: absolute;
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 150px;
+    width: 278px;
+    height: 388px;
+    left: 40px;
+    top: 83px;
+    background: #F7DEA6;
 }
 
 .pic_of img {
-    position: relative;
-    width: 426px;
-    height: 388px;
+    position: absolute;
+    /* width: 426px; */
+    /* height: 388px; */
     left: 40px;
-    /* top: 206px; */
+    bottom: 0px;
+
 }
 
-.pic_of h1 {}
+.pic_of h1 {
+    position: absolute;
+    left: 466px;
+}
 
-.info h2 {}
+.info {
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: auto;
+    max-width: 741px;
+    text-align: justify;
+    /* margin-bottom: px; */
+}
 
-.info p {}
+.info h2 {
+    font-weight: 500;
+    margin-bottom: 24px;
+    line-height: 133%;
+}
+
+.info p {
+    font-weight: 400;
+}
 
 .exs {
     margin: auto;
     position: relative;
     display: block;
-    width: 100%;
+    width: 100% auto;
     float: left;
     font-weight: 500;
+    margin: 40px;
 }
 
 .ex {
@@ -82,7 +114,7 @@ footer {
     width: 152px;
     height: 216px;
     display: block;
-    margin: 24px;
+    margin: 12px;
     border-radius: 30px;
     text-align: center;
     padding: 24px;
@@ -105,10 +137,28 @@ footer {
     padding: auto
 }
 
+.ex img {
+    display: block;
+    position: relative;
+    float: left;
+    border-radius: 50%;
+}
+
+.ex p {
+    display: block;
+    float: left;
+    position: relative;
+    margin-top: 24px;
+    text-align: left;
+}
+
 .ex_btn p {
     position: relative;
+    float: unset;
     top: 10px;
     height: 20px;
+    margin-top: 0px;
+    text-align: center;
 }
 
 #ex1 {
@@ -131,21 +181,45 @@ footer {
     background-color: #FFFEEB;
 }
 
-.languages {}
-
-.fun {}
-
-footer {}
-
-#exsersise_nav_bar {
-    display: block;
+.languages {
+    margin-left: 40px;
+    /* width: auto; */
 }
 
-#exsersise_nav_bar a {
-    display: block;
+.languages h2 {
+    font-weight: 500;
+}
+
+.languages ul {
+    position: relative;
+    margin-top: 12px;
+    margin-left: 32px;
+    max-width: 90%;
+    line-height: 140.62%;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.fun {
+    position: relative;
 
 }
 
-#exsersise_nav_bar a:hover {
-    background;
+footer {
+    /* background-color: ; */
+    font-family: 'Nunito';
+    font-weight: 400;
+    color: #8D8D8D;
+    position: relative;
+}
+
+#footer_eye_roll {}
+
+footer h4 {
+    font-weight: 500;
+    color: #333333;
+}
+
+nav {
+    margin-left: 40px;
 }
