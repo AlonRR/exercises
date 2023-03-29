@@ -239,16 +239,19 @@ h2 {
     padding-bottom: 40px;
 }
 
+.fun h2 {
+    padding-bottom: 24px;
+}
+
 #full_of_stuff {
     display: block;
     position: relative;
     margin-right: 40px;
-    /* height: 50px; */
     width: auto;
     background-color: #F9BDBD;
 }
 
-#full_of_stuff span {
+#full_of_stuff section {
     position: relative;
     display: inline-block;
     padding-left: 3%;
@@ -258,7 +261,7 @@ h2 {
     font-weight: 400;
 }
 
-#full_of_stuff span p {
+#full_of_stuff section p {
     width: 306px;
 }
 
