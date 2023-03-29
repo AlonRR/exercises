@@ -26,22 +26,32 @@ footer {
 }
 
 .logo {
-    font-family: 'Nunito';
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
     height: 33px;
     margin: 40px;
-    line-height: 33px;
+    font-family: 'Nunito';
+    font-size: 24px;
     font-weight: 700;
     letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+.logo img {
+    position: relative;
+    float: left;
 }
 
 .logo span {
     position: relative;
+    float: left;
+    padding-left: 8px;
+    height: inherit;
     text-decoration: none;
     fill: solid;
     color: #222222;
+    line-height: 33px;
 }
 
 .pic_of {
@@ -51,6 +61,13 @@ footer {
     left: 0px;
     /* top: 123px; */
     margin-bottom: 24px;
+    width: 100%;
+}
+
+.title_area {
+    position: relative;
+    margin-left: 40px;
+    top: 83px;
 }
 
 #not_rectangle {
@@ -59,23 +76,36 @@ footer {
     border-bottom-left-radius: 150px;
     width: 278px;
     height: 388px;
-    left: 40px;
-    top: 83px;
     background: #F7DEA6;
 }
 
 .pic_of img {
     position: absolute;
-    /* width: 426px; */
-    /* height: 388px; */
     left: 40px;
     bottom: 0px;
-
 }
 
-.pic_of h1 {
+.title_text {
     position: absolute;
     left: 466px;
+    font-family: 'Nunito';
+}
+
+.title_text h1 {
+    position: relative;
+    color: #3E3F43;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 49px;
+}
+
+.title_text span {
+    position: relative;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    top: 16px;
 }
 
 .info {
@@ -85,7 +115,6 @@ footer {
     width: auto;
     max-width: 741px;
     text-align: justify;
-    /* margin-bottom: px; */
 }
 
 .info h2 {
@@ -206,20 +235,50 @@ footer {
 }
 
 footer {
-    /* background-color: ; */
     font-family: 'Nunito';
     font-weight: 400;
     color: #8D8D8D;
     position: relative;
 }
 
-#footer_eye_roll {}
-
-footer h4 {
-    font-weight: 500;
-    color: #333333;
+#footer_eye_roll {
+    position: absolute;
+    width: 100%;
+    height: 301px;
 }
 
-nav {
+#footer_title {
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333333;
     margin-left: 40px;
+    padding-top: 32px;
+}
+
+#social_sec {
+    position: relative;
+    margin-left: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #8D8D8D;
+}
+
+#social_sec a {
+    padding-top: 16px;
+    color: #8D8D8D;
+}
+
+#copy_r {
+    position: relative;
+    padding-left: 40px;
+    margin-top: 70px;
+    margin-bottom: 51.35px;
+    color: #8D8D8D;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+#copy_r a {
+    color: inherit;
 }
