@@ -25,6 +25,13 @@ footer {
     font-family: Nunito;
 }
 
+h2 {
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+}
+
 .logo {
     background-repeat: no-repeat;
     background-size: contain;
@@ -110,17 +117,16 @@ footer {
 
 .info {
     position: relative;
-    margin-left: 40px;
-    margin-right: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 83px;
     width: auto;
     max-width: 741px;
     text-align: justify;
 }
 
 .info h2 {
-    font-weight: 500;
-    margin-bottom: 24px;
-    line-height: 133%;
+    padding-bottom: 24px;
 }
 
 .info p {
@@ -128,21 +134,20 @@ footer {
 }
 
 .exs {
-    margin: auto;
+    display: inline-block;
     position: relative;
-    display: block;
-    width: 100% auto;
-    float: left;
     font-weight: 500;
-    margin: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
 }
 
+
 .ex {
-    float: left;
+    display: block;
     position: relative;
+    float: left;
     width: 152px;
     height: 216px;
-    display: block;
     margin: 12px;
     border-radius: 30px;
     text-align: center;
@@ -211,19 +216,16 @@ footer {
 }
 
 .languages {
-    margin-left: 40px;
-    /* width: auto; */
-}
-
-.languages h2 {
-    font-weight: 500;
+    position: relative;
+    display: block;
+    padding-left: 40px;
+    width: auto;
 }
 
 .languages ul {
     position: relative;
-    margin-top: 12px;
-    margin-left: 32px;
-    max-width: 90%;
+    padding-top: 12px;
+    padding-left: 32px;
     line-height: 140.62%;
     text-align: justify;
     font-weight: 400;
@@ -231,14 +233,14 @@ footer {
 
 .fun {
     position: relative;
-
+    padding-left: 40px;
 }
 
 footer {
+    position: relative;
     font-family: 'Nunito';
     font-weight: 400;
     color: #8D8D8D;
-    position: relative;
 }
 
 #footer_eye_roll {
