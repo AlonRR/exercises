@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Amiko', sans-serif;
+}
+
+a {
+    /* Removes underline from link */
+    text-decoration: none;
+    display: block;
+}
+
+header,
+main,
+footer,
+nav,
+aside,
+section {
+    display: block;
+}
+
+header,
+footer {
+    width: 100%;
+}
