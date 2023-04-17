@@ -2,11 +2,17 @@
     margin: 0;
     padding: 0;
     font-family: 'Amiko', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
 }
 
 a {
     text-decoration: none;
     display: block;
+}
+
+a::after{
+    text-decoration: none;
 }
 
 header,
@@ -15,10 +21,44 @@ footer,
 nav,
 aside,
 section {
-    display: block;
+    /* display: block; */
 }
 
 header,
 footer {
     width: 100%;
+}
+
+header {
+    background: #F5F5F5;
+    height: 123px;
+    display: flex;
+
+    justify-content: space-evenly;
+}
+
+.main_nav_bar {
+    display: flex;
+    align-items: center;
+}
+
+.main_nav_bar ul li {
+    display: inline-block;
+    position: relative;
+    /* display: inline-block; */
+}
+
+#center_page {
+    font-weight: 700;
+}
+
+#center_page h1 {
+    font-size: 72px;
+}
+#tiles{
+    
+}
+footer{
+    height: 41px;
+    
 }
