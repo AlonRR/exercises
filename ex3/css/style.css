@@ -11,8 +11,9 @@ a {
     display: block;
 }
 
-a::after{
+a:-webkit-any-link {
     text-decoration: none;
+    color: inherit;
 }
 
 header,
@@ -21,7 +22,7 @@ footer,
 nav,
 aside,
 section {
-    /* display: block; */
+    display: block;
 }
 
 header,
@@ -33,19 +34,35 @@ header {
     background: #F5F5F5;
     height: 123px;
     display: flex;
-
     justify-content: space-evenly;
 }
 
 .main_nav_bar {
     display: flex;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .main_nav_bar ul li {
     display: inline-block;
     position: relative;
-    /* display: inline-block; */
+}
+
+.selected {
+    display: inline-flex;
+    /* flex: auto; */
+}
+
+.selected div {
+    display: inline-flex;
+    position: absolute;
+    background-color: #F72828;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    top: -14px;
+    margin-left: -2.5px;
+    /* left: -2; */
 }
 
 #center_page {
@@ -55,10 +72,10 @@ header {
 #center_page h1 {
     font-size: 72px;
 }
-#tiles{
-    
-}
-footer{
+
+#tiles {}
+
+footer {
     height: 41px;
-    
+
 }
