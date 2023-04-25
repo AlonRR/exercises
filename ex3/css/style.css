@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Amiko', sans-serif;
-    font-weight: 400;
     font-size: 24px;
 }
 
@@ -31,7 +30,7 @@ footer {
 }
 
 header {
-    background: #F5F5F5;
+    background: #F2E9E9;
     height: 123px;
     display: flex;
     justify-content: space-evenly;
@@ -41,6 +40,7 @@ header {
     display: flex;
     align-items: center;
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 .main_nav_bar ul li {
@@ -62,7 +62,6 @@ header {
     border-radius: 50%;
     top: -14px;
     margin-left: -2.5px;
-    /* left: -2; */
 }
 
 #center_page {
@@ -73,9 +72,147 @@ header {
     font-size: 72px;
 }
 
-#tiles {}
+.mixMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin-top: 91px;
+    margin-bottom: 145px;
+}
+
+.THE_MIX,
+#col1,
+.the1s,
+#col2,
+#col2-2,
+.area1,
+.area2,
+.area3,
+.rec {
+    display: inline-flex;
+    position: relative;
+}
+
+#col1,
+#col2-2,
+.area2 {
+    flex-direction: column;
+}
+
+.THE_MIX {
+    width: 437px;
+}
+
+#col1 {
+    width: 136px;
+    margin-top: 44px;
+    margin-right: 13px;
+}
+
+.the11s {}
+
+#col2 {
+    width: 288px;
+    margin-bottom: 16px;
+}
+
+#col2-2 {
+    width: 28px;
+}
+
+.area1 {
+    flex-wrap: wrap;
+}
+
+.area2 {
+    flex-wrap: wrap;
+}
+
+.area3 {
+    width: 151px;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.rec {
+    background-color: #EBEF18;
+}
+
+.rec2 {
+    height: 352px;
+    width: 246px;
+    margin-right: 14px;
+    margin-top: 44px;
+}
+
+.rec3,
+.rec33 {
+    width: 28px;
+}
+
+.rec3 {
+    height: 55px;
+    margin-bottom: 11px;
+}
+
+.rec33 {
+    height: 198px;
+}
+
+.rec4 {
+    width: 75px;
+    height: 23px;
+    margin-bottom: 8px;
+}
+
+.rec5,
+.rec6 {
+    margin-bottom: 11px;
+}
+
+.rec5 {
+    width: 136px;
+    height: 46px;
+}
+
+.rec6 {
+    width: 134px;
+    height: 404px;
+}
+
+.rec7 {
+    width: 123px;
+    height: 212px;
+    margin-right: 14px;
+}
+
+.rec8 {
+    width: 55px;
+    height: 105px;
+}
+
+.rec9 {
+    width: 110px;
+    height: 58px;
+}
+
+.rec10 {
+    width: 88px;
+    height: 28px;
+    margin-bottom: 7px;
+}
+
+.rec11 {
+    width: 25px;
+    height: 26px;
+    margin-right:7px ;
+}
 
 footer {
     height: 41px;
-
+    background-color: #000000;
+    position: fixed;
+    bottom: 0px;
 }
