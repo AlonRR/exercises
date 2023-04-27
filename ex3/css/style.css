@@ -30,17 +30,22 @@ body {
     position: relative;
 }
 
-header,
-footer {
+.normalHeader,
+footer,
+.footerBlackBar {
     width: 100%;
 }
 
 header {
-    background: #F2E9E9;
     height: 123px;
-    display: flex;
+    background-color: #F2E9E9;
+}
+
+.normalHeader {
     justify-content: space-evenly;
 }
+
+.layout3Header {}
 
 .main_nav_bar {
     display: flex;
@@ -49,12 +54,12 @@ header {
     font-weight: 400;
 }
 
-.main_nav_bar ul li {
+.mainNavBarList {
     display: inline-block;
     position: relative;
 }
 
-.main_nav_bar ul li:hover {
+.mainNavBarList:hover {
     color: #F72828;
 }
 
@@ -62,7 +67,7 @@ header {
     display: inline-flex;
 }
 
-.selected div {
+.selected>div {
     display: inline-flex;
     position: absolute;
     background-color: #F72828;
@@ -219,7 +224,8 @@ header {
     margin-right: 7px;
 }
 
-footer {
+.footerBlackBar {
+    flex: 0 auto;
     height: 41px;
     background-color: #000000;
     position: fixed;
@@ -272,7 +278,7 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    bottom: 44px;
+    bottom: 20px;
     width: 169px;
 }
 
@@ -313,7 +319,16 @@ footer {
     width: 457px;
 }
 
-.rectanglesC2 .rectangle:last-child{
-    flex:1;
-    /* overflow: ; */
+.rectanglesC2 .rectangle:last-child {
+    flex: 1;
+}
+
+.layout3footer {}
+
+.yellowBottom {
+    height: 463px;
+    background-color: #EBEF18;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
