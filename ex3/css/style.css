@@ -323,12 +323,34 @@ header {
     flex: 1;
 }
 
-.layout3footer {}
+.layout3main {
+    flex-direction: row;
+    flex: auto;
+    display: flex;
+    height: 995px;
+    position: inherit;
+}
+
+.layout3aside {
+    background-color: #E5E5E5;
+    flex-direction: row;
+    /* flex-grow: 1; */
+    flex: 372px;
+}
+
+.layout3center {
+    flex: 1;
+}
+
+.layout3blueBar {
+    background-color: #1847EF4D;
+    flex: 104px;
+}
 
 .yellowBottom {
-    height: 463px;
+    height: 504px;
     background-color: #EBEF18;
     width: 100%;
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
