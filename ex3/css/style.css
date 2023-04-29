@@ -45,8 +45,6 @@ header {
     justify-content: space-evenly;
 }
 
-.layout3Header {}
-
 .main_nav_bar {
     display: flex;
     align-items: center;
@@ -331,14 +329,33 @@ header {
     position: inherit;
 }
 
+.layout3Header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 24px;
+}
+
+.layout3Header>.square {
+    top: 0px;
+}
+
 .layout3aside {
     background-color: #E5E5E5;
     flex-direction: row;
     min-width: 372px;
+    display: flex;
+    justify-content: center;
+}
+
+.layout3aside>span {
+    margin-top: 123px;
 }
 
 .layout3center {
     flex: 1;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .layout3blueBar {
@@ -352,4 +369,26 @@ header {
     width: 100%;
     position: relative;
     bottom: 0;
+}
+
+@media (max-width:767px) {
+    .layout3main {
+        flex-direction: column;
+    }
+
+    .layout3aside {
+        height: 105px;
+    }
+
+    .layout3aside>span {
+        margin-top: 45px;
+        font-size: 24px;
+    }
+
+    .layout3blueBar{
+        display: none;
+    }
+    .yellowBottom {
+        min-height: 450px;
+    }
 }
