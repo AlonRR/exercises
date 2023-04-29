@@ -334,8 +334,7 @@ header {
 .layout3aside {
     background-color: #E5E5E5;
     flex-direction: row;
-    /* flex-grow: 1; */
-    flex: 372px;
+    min-width: 372px;
 }
 
 .layout3center {
@@ -344,11 +343,11 @@ header {
 
 .layout3blueBar {
     background-color: #1847EF4D;
-    flex: 104px;
+    min-width: 104px;
 }
 
 .yellowBottom {
-    height: 504px;
+    min-height: 504px;
     background-color: #EBEF18;
     width: 100%;
     position: relative;
