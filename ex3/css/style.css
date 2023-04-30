@@ -251,23 +251,20 @@ header {
     width: 80px;
     display: block;
     position: relative;
+    background-color: #000000;
 }
 
-.square:nth-child(1) {
+.stairsAside .square:nth-child(1) {
     top: 119px;
 }
 
-.square:nth-child(2) {
+.stairsAside .square:nth-child(2) {
     background-color: #FFFFFF;
     top: 247px;
     left: 89px;
 }
 
-.square:not(:nth-child(2)) {
-    background-color: #000000;
-}
-
-.square:nth-child(3) {
+.stairsAside .square:nth-child(3) {
     top: 616px
 }
 
@@ -325,7 +322,7 @@ header {
     flex-direction: row;
     flex: auto;
     display: flex;
-    height: 995px;
+    min-height: 995px;
     position: inherit;
 }
 
@@ -356,6 +353,10 @@ header {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
+    gap: 132px;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 123px;
 }
 
 .layout3blueBar {
@@ -385,9 +386,10 @@ header {
         font-size: 24px;
     }
 
-    .layout3blueBar{
+    .layout3blueBar {
         display: none;
     }
+
     .yellowBottom {
         min-height: 450px;
     }
