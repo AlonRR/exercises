@@ -8,7 +8,11 @@ let numberOfCards = 0;
 })();
 
 let createNewCard = () => {
-  if (numberOfCards >= 12) return;
+  if (numberOfCards >= 12) {
+    $(`#clickSquare`).off(`click`);
+    $(`#clickSquare`).css({ "background-color": "red" });
+    return;
+  }
   for (let i = 0; i < 3; i++) {
     let currentCard = numberOfCards;
     let newCard = $(
