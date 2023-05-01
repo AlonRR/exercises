@@ -10,7 +10,10 @@ let numberOfCards = 0;
 let createNewCard = () => {
   if (numberOfCards >= 12) return;
   for (let i = 0; i < 3; i++) {
-    let newCard = $(`<span id="cardNum${numberOfCards}">`);
+    let currentCard = numberOfCards;
+    let newCard = $(
+      `<span class="card" id="cardNum${currentCard}" data="${currentCard}">`
+    );
     newCard.css({
       width: `${cardSize}px`,
       height: `${cardSize}px`,
@@ -18,28 +21,64 @@ let createNewCard = () => {
       display: `flex`,
       "text-align": `center`,
       "justify-content": `center`,
-      'align-items': 'center',
-      'font-size':`calc(${cardSize}px / 3)`,
+      "align-items": "center",
+      "font-size": `calc(${cardSize}px / 3)`,
     });
-    let newLetter = $(`<span id="letterNumber${numberOfCards}">`);
+    $(`.layout3center`).append(newCard);
+    let newLetter = $(`<span class="letter" id="letterNumber${currentCard}">`);
     let raL = randomLetter();
     newLetter.html(`${raL}`);
     newLetter.css({
       position: `relative`,
       flex: `1`,
       color: `#FFFFFF`,
-      'font-size':'inherit',
-      display:'none',
+      "font-size": "inherit",
+      display: "none",
     });
-    $(`.layout3center`).append(newCard);
     newCard.append(newLetter);
+    $(`#cardNum${currentCard}`).on(`click`, cardGame);
     cardSize += 20;
     numberOfCards++;
   }
 };
+
+let thisCard = undefined;
+function cardGame() {
+  let currentCard = $(this);
+  let currentCardChild = currentCard.children(`span`);
+  currentCard.css({ "background-color": `blue` });
+  currentCardChild.css({ display: `block` });
+  //currect guess swaps background to green and removes event listener
+  if (
+    thisCard != undefined &&
+    thisCard.children(`span`).text() == currentCardChild.text()
+  ) {
+    currentCard.css(`background-color`, `green`);
+    thisCard.css(`background-color`, `green`);
+    currentCard.off(`click`);
+    thisCard.off(`click`);
+    thisCard = undefined;
+    return;
+  }
+  //incorrect guess
+  if (thisCard != undefined) {
+    setTimeout(() => {
+      currentCardChild.css(`display`, `none`);
+      currentCard.css({ "background-color": `#000000` });
+      thisCard.children(`span`).css(`display`, `none`);
+      thisCard.css({ "background-color": `#000000` });
+      thisCard.on(`click`, cardGame());
+    }, 7000);
+    thisCard = undefined;
+    return;
+  }
+  currentCard.off(`click`);
+  thisCard = currentCard;
+}
+
 let letters = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
 let lastLetter = 0;
-// let currentLetters;
+
 let randomLetter = () => {
   let newLetter;
   if (lastLetter != 0) {
@@ -52,35 +91,3 @@ let randomLetter = () => {
   letters = letters.replace(newLetter, ``);
   return newLetter;
 };
-// let card = {
-//   height: "80px",
-//   width: "80px",
-//   display: "block",
-//   position: "relative",
-//   "background-color": "#000000",
-// };
-
-// class card {
-//   constructor() {
-//     this = document.createElement("span");
-//     this.width = cardSize;
-//     this.height = cardSize;
-//     this.backgroundColor = `#000000`;
-//     cardSize += 20;
-//     numberOfCards++;
-//   }
-//   getCardWidth() {
-//     return this.width;
-//   }
-//   getCardHeight() {
-//     return this.height;
-//   }
-//   // output() {
-//     //   return `${this}`;
-//     // }
-// }
-// this.attr(`id`, `cardNum${numberOfCards}`).css({
-//   width: `${cardSize}px`,
-//   height: `${cardSize}px`,
-//   "background-color": `#000000`,
-// });
