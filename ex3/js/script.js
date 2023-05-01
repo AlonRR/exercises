@@ -66,14 +66,16 @@ function cardGame() {
   }
   //incorrect guess
   if (thisCard != undefined) {
+    currentCard.off(`click`);
     setTimeout(() => {
       currentCardChild.css(`display`, `none`);
       currentCard.css({ "background-color": `#000000` });
+      currentCard.on(`click`, cardGame);
       thisCard.children(`span`).css(`display`, `none`);
       thisCard.css({ "background-color": `#000000` });
-      thisCard.on(`click`, cardGame());
-    }, 7000);
-    thisCard = undefined;
+      thisCard.on(`click`, cardGame);
+      thisCard = undefined;
+    }, 1000);
     return;
   }
   currentCard.off(`click`);
