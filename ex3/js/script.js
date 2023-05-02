@@ -91,19 +91,21 @@ let uncompletedLetters = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
 let lastLetter = 0;
 
 let letterShuffle = () => {
+  let leftLetters = uncompletedLetters;
   let countUncompleted = 0;
   $(`.uncompleted`).each(() => {
     countUncompleted++;
   });
-  let letterBuffer=``;
+  let letterBuffer = ``;
   countUncompleted = Math.ceil(countUncompleted / 2);
   for (let i = 0; i < countUncompleted; i++) {
-    let randomLetter =
-      uncompletedLetters[Math.floor(Math.random() * uncompletedLetters.length)];
+    let randomNum = Math.floor(Math.random() * leftLetters.length);
+    let randomLetter = leftLetters[randomNum];
     letterBuffer += randomLetter;
     letterBuffer += randomLetter;
+    leftLetters = leftLetters.slice(0,randomNum) + leftLetters.slice(randomNum+1)
   }
-  $(`.uncompleted`).each((index,element) => {
+  $(`.uncompleted`).each((index, element) => {
     let randomNum = Math.floor(Math.random() * letterBuffer.length);
     let newLetter = letterBuffer[randomNum];
     letterBuffer[randomNum] = ``;
