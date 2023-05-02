@@ -98,17 +98,21 @@ let letterShuffle = () => {
   });
   let letterBuffer = ``;
   countUncompleted = Math.ceil(countUncompleted / 2);
+  let leftLen = leftLetters.length;
   for (let i = 0; i < countUncompleted; i++) {
-    let randomNum = Math.floor(Math.random() * leftLetters.length);
+    let randomNum = Math.floor(Math.random() * leftLen);
     let randomLetter = leftLetters[randomNum];
     letterBuffer += randomLetter;
     letterBuffer += randomLetter;
-    leftLetters = leftLetters.slice(0,randomNum) + leftLetters.slice(randomNum+1)
+    leftLetters =
+      leftLetters.slice(0, randomNum) + leftLetters.slice(randomNum + 1);
+    leftLen--;
   }
   $(`.uncompleted`).each((index, element) => {
     let randomNum = Math.floor(Math.random() * letterBuffer.length);
     let newLetter = letterBuffer[randomNum];
-    letterBuffer[randomNum] = ``;
+    letterBuffer =
+      letterBuffer.slice(0, randomNum) + letterBuffer.slice(randomNum + 1);
     $(element).children(`span`).html(`${newLetter}`);
   });
 };
