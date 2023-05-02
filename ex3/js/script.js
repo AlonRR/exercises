@@ -16,7 +16,7 @@ let createNewCard = () => {
   for (let i = 0; i < 3; i++) {
     let currentCard = numberOfCards;
     let newCard = $(
-      `<span class="card" id="cardNum${currentCard}" data="${currentCard}">`
+      `<span class="card uncompleted" id="cardNum${currentCard}" data="${currentCard}">`
     );
     newCard.css({
       width: `${cardSize}px`,
@@ -30,8 +30,6 @@ let createNewCard = () => {
     });
     $(`.layout3center`).append(newCard);
     let newLetter = $(`<span class="letter" id="letterNumber${currentCard}">`);
-    let raL = randomLetter();
-    newLetter.html(`${raL}`);
     newLetter.css({
       position: `relative`,
       flex: `1`,
@@ -44,6 +42,7 @@ let createNewCard = () => {
     cardSize += 20;
     numberOfCards++;
   }
+  letterShuffle();
 };
 
 let thisCard = undefined;
@@ -58,9 +57,15 @@ function cardGame() {
     thisCard.children(`span`).text() == currentCardChild.text()
   ) {
     currentCard.css(`background-color`, `green`);
-    thisCard.css(`background-color`, `green`);
     currentCard.off(`click`);
+    currentCard.removeClass(`uncompleted`).addClass(`completed`);
+    thisCard.css(`background-color`, `green`);
     thisCard.off(`click`);
+    thisCard.removeClass(`uncompleted`).addClass(`completed`);
+    uncompletedLetters = uncompletedLetters.replace(
+      currentCardChild.text(),
+      ``
+    );
     thisCard = undefined;
     return;
   }
@@ -75,25 +80,33 @@ function cardGame() {
       thisCard.css({ "background-color": `#000000` });
       thisCard.on(`click`, cardGame);
       thisCard = undefined;
-    }, 1000);
+    }, 500);
     return;
   }
   currentCard.off(`click`);
   thisCard = currentCard;
 }
 
-let letters = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
+let uncompletedLetters = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
 let lastLetter = 0;
 
-let randomLetter = () => {
-  let newLetter;
-  if (lastLetter != 0) {
-    newLetter = lastLetter;
-    lastLetter = 0;
-    return newLetter;
+let letterShuffle = () => {
+  let countUncompleted = 0;
+  $(`.uncompleted`).each(() => {
+    countUncompleted++;
+  });
+  let letterBuffer=``;
+  countUncompleted = Math.ceil(countUncompleted / 2);
+  for (let i = 0; i < countUncompleted; i++) {
+    let randomLetter =
+      uncompletedLetters[Math.floor(Math.random() * uncompletedLetters.length)];
+    letterBuffer += randomLetter;
+    letterBuffer += randomLetter;
   }
-  newLetter = letters[Math.floor(Math.random() * letters.length)];
-  lastLetter = newLetter;
-  letters = letters.replace(newLetter, ``);
-  return newLetter;
+  $(`.uncompleted`).each((index,element) => {
+    let randomNum = Math.floor(Math.random() * letterBuffer.length);
+    let newLetter = letterBuffer[randomNum];
+    letterBuffer[randomNum] = ``;
+    $(element).children(`span`).html(`${newLetter}`);
+  });
 };
