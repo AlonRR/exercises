@@ -1,0 +1,14 @@
+/* body,
+form,
+label {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.interests{
+    flex-wrap: nowrap;
+    flex-direction: column;
+} */
