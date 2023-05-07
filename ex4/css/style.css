@@ -1,14 +1,39 @@
-/* body,
+.container{
+    max-width: 500px;
+}
+/* body{
+   color: var(--bs-body-color)
+} */
+/* body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 300px;
+} */
+/* 
+body,
 form,
 label {
     display: flex;
-    flex-wrap: wrap;
-    width: 70%;
-    justify-content: flex-start;
     gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
 }
 
-.interests{
+
+form {
+    flex-grow: 1;
+    max-width: 500px;
+    align-items: stretch;
+    align-self: center;
+}
+
+
+.interests {
     flex-wrap: nowrap;
     flex-direction: column;
 } */
