@@ -1,6 +1,12 @@
 .container{
     max-width: 500px;
 }
+
+/* 
+input:hover:invalid::after{
+    content: ;
+    background-color: lightpink;
+} */
 /* body{
    color: var(--bs-body-color)
 } */
